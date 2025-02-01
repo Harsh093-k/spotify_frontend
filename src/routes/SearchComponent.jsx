@@ -20,7 +20,7 @@ const SearchComponent = () => {
       const response = await makeAuthenticatedGETRequest("/song/get/songname/" + searchText);
       setSongData(response.data);  // Ensure you're accessing response.data
     } catch (error) {
-      console.error(error);
+      console.log(error);
       
     } finally {
       setIsLoading(false);
@@ -63,7 +63,7 @@ const SearchComponent = () => {
       </div>
 
       {isLoading && <p>Loading...</p>}  {/* Loading State */}
-      {error && <p className="text-red-500">{error}</p>}  {/* Error Message */}
+      {error && <p className="text-red-500">Erroe</p>}  {/* Error Message */}
 
       <div className="pt-5 space-y-3">
         <div className="text-white">
