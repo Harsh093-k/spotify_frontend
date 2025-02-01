@@ -63,8 +63,7 @@ const SearchComponent = () => {
       </div>
 
       {isLoading && <p>Loading...</p>}  {/* Loading State */}
-      {error && <p className="text-red-500">Erroe</p>}  {/* Error Message */}
-
+     
       <div className="pt-5 space-y-3">
         <div className="text-white">
           Search results for key '<span className="font-bold">{searchText}</span>'
