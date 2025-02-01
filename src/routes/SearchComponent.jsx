@@ -9,19 +9,19 @@ const SearchComponent = () => {
   const [searchText, setSearchText] = useState("");
   const [songData, setSongData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+ 
 
   const searchSong = async () => {
     if (!searchText) return;  // Avoiding empty searches
     setIsLoading(true);
-    setError("");  // Reset error message before search
+    ;  // Reset error message before search
 
     try {
       const response = await makeAuthenticatedGETRequest("/song/get/songname/" + searchText);
       setSongData(response.data);  // Ensure you're accessing response.data
     } catch (error) {
       console.error(error);
-      setError("Failed to fetch songs. Please try again.");
+      
     } finally {
       setIsLoading(false);
     }

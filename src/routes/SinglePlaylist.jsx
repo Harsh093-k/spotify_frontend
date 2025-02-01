@@ -6,7 +6,7 @@ import { makeAuthenticatedGETRequest } from "../utils/serverHeplers";
 
 const SinglePlaylistComponent = () => {
   const [playlistDetail, setPlaylistDetail] = useState({});
-  const [error, setError] = useState("");
+  
   const { playlistId } = useParams();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const SinglePlaylistComponent = () => {
         console.log(response);
         setPlaylistDetail(response);
       } catch (err) {
-        setError("Failed to fetch playlists.");
+       
         console.error(err);
       }
     }

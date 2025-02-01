@@ -6,7 +6,7 @@ import LoggedInContainer from '../Container/LoggedInContainer'
 
 
 const MySongComponent = () => {
-  const [error, setError] = useState(null);
+  
   const [songData, setSongData] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const MySongComponent = () => {
         }
       } catch (err) {
         if (isMounted) {
-          setError("Error fetching song data");
+          console.log("Error fetching song data");
         }
       }
     };
